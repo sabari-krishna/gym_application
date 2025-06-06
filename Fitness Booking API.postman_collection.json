@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "a96a7dd0-a9da-4e23-99c8-866105f9f57f",
+		"name": "Fitness Booking API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37794373"
+	},
+	"item": [
+		{
+			"name": "List All Classes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/classes?timezone=Asia/Kolkata",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"classes"
+					],
+					"query": [
+						{
+							"key": "timezone",
+							"value": "Asia/Kolkata"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book a Class",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"class_id\": \"051e8564-d080-4e45-8007-2697f89d1120\",\n    \"email\":\"sabarikrishnaaaaaaa@yopmail.com\",\n    \"clinet_name\":\"sabari krishna\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/book",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/bookings?timezone=Asia/Kolkata",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "timezone",
+							"value": "Asia/Kolkata"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000"
+		}
+	]
+}
