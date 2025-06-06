@@ -10,7 +10,7 @@ This project is a Django-based API for booking fitness classes. Users can book s
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate  # For Windows: venv\Scripts\activate
+source venv/bin/activate
 ```
 
 ### 2. Install Dependencies
